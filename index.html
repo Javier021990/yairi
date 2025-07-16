@@ -6,14 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Para Yairi Denisse</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .img-side {
+      width: 60px;
+      height: auto;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body class="bg-pink-50 text-gray-800 flex flex-col items-center justify-center min-h-screen p-6 space-y-8">
 
-  <div class="text-center">
-    <h1 class="text-4xl md:text-5xl font-bold">Para Yairi Denisse</h1>
-    <p class="mt-4 text-lg md:text-xl max-w-xl mx-auto">
-      Cada verso es un reflejo de lo que haces sentir.
-    </p>
+  <div class="flex items-center justify-center gap-6">
+    <img src="oso.png" alt="Osito" class="img-side" />
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Para Yairi Denisse</h1>
+      <p class="mt-4 text-lg md:text-xl max-w-xl mx-auto">
+        Cada verso es un reflejo de lo que haces sentir.
+      </p>
+    </div>
+    <img src="rosa.png" alt="Rosa" class="img-side" />
   </div>
 
   <section class="bg-white rounded-2xl shadow-xl p-6 max-w-2xl w-full">
@@ -43,10 +56,19 @@ serías ese que no se quiere terminar nunca.
     <p class="text-lg">
       Gracias por inspirar tanto. Esta página es solo un reflejo de lo que dejas en quienes te rodean. Especialmente, en mí.
     </p>
-    <button class="mt-4 bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full shadow">
+    <button onclick="mostrarRamo()" class="mt-4 bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full shadow">
       Esto es solo para ti 💌
     </button>
+    <div class="mt-6 hidden" id="ramo-container">
+      <img src="ramo.png" alt="Ramo de flores" class="mx-auto w-40 rounded-xl shadow-lg" />
+    </div>
   </section>
+
+  <script>
+    function mostrarRamo() {
+      document.getElementById('ramo-container').classList.remove('hidden');
+    }
+  </script>
 
 </body>
 </html>
